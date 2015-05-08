@@ -26,7 +26,7 @@ java.lang.ClassCastException: org.hibernate.jpa.HibernatePersistenceProvider can
 ## Notes
 Different error messages can be obtained by either
 
-1. Removing the `jboss-app.xml` from the META-INF directory of the EAR, which results in the following (due to a mismatch between the JBoss JARs and the EAR JARs):
+* Removing the `jboss-app.xml` from the META-INF directory of the EAR, which results in the following (due to a mismatch between the JBoss JARs and the EAR JARs):
 
 ```
 2015-05-08 14:03:20,519 WARN  [org.jboss.system.ServiceController] Problem starting service persistence.units:ear=earmodule-1.0-SNAPSHOT.ear,jar=ejb-1.0-SNAPSHOT.jar,unitName=examplePersistenceUnit
@@ -41,7 +41,7 @@ Caused by: java.lang.NoSuchMethodError: org.jboss.logging.Logger.tracef(Ljava/la
 ...
 ```
 
-2. Removing `ejb3-persistence.jar` from the JBoss lib directory (e.g. default/lib):
+* Removing `ejb3-persistence.jar` from the JBoss lib directory (e.g. default/lib):
 
 ```
 2015-05-08 14:08:04,955 WARN  [org.jboss.system.ServiceController] Problem creating service jboss.j2ee:service=EJB3,module=ejb-1.0-SNAPSHOT.jar
