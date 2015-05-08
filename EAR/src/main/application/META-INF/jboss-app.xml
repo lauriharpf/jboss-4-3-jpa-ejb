@@ -1,0 +1,10 @@
+<jboss-app>
+  <!-- Isolate the EAR to prevent conflicts between classes in JBoss lib and classes in the EAR. Details at
+       https://community.jboss.org/wiki/ClassLoadingConfiguration ('Isolation with Overriding Server Classes') -->
+  <loader-repository>
+    com.foo.bar.example:archive=example.ear
+    <loader-repository-config>
+      java2ParentDelegation=false
+    </loader-repository-config>
+  </loader-repository>
+</jboss-app>
